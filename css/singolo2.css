@@ -1,0 +1,228 @@
+/* normalize */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", "Verdana", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+/* general styles */
+.general-background {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding: 0 30px;
+  overflow-x: hidden;
+}
+
+.section-header-title {
+  padding-top: 2px;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 18px;
+  letter-spacing: -0.007em;
+  text-transform: capitalize;
+  color: #666d89;
+}
+
+.section-header-description {
+  padding: 27px 0 30px 0;
+  text-align: justify;
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  color: #767e9e;
+}
+
+.section-header-wrapper {
+  padding: 0 10px;
+  padding-top: 67px;
+}
+
+/* portfolio */
+.portfolio-background {
+  width: 100%;
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+}
+
+.portfolio-header-padding {
+  padding-bottom: 10px;
+}
+
+.potfolio-tags {
+  padding-bottom: 8px;
+}
+
+.portfolio-tag {
+  box-sizing: border-box;
+  padding: 2px 6px;
+  margin-right: 6px;
+  border: 1px solid #666d89;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-tag-selected,
+.portfolio-tag:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.portfolio-content-wrapper {
+  overflow: hidden;
+  padding-bottom: 54px;
+}
+
+.portfolio-content-row {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.portfolio-item {
+  padding: 9px 10px;
+  box-sizing: border-box;
+}
+
+.portfolio-item img {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-item img:hover {
+  border: 1px solid #ffffff;
+  box-shadow: 1px 1px 3px 1px rgba(255, 255, 255, 0.5);
+}
+
+/* about us */
+.about-background {
+  width: 100%;
+  background-color: #f2f2f2;
+  border-bottom: 6px solid #ffffff;
+}
+
+.about-content-wrapper {
+  padding-bottom: 57px;
+}
+
+.about-content-row {
+  display: flex;
+}
+
+.about-item {
+  padding: 10px;
+}
+
+.about-description-padding {
+  padding: 27px 0 34px 0;
+}
+
+.persone-name {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  padding: 14px 0 10px 0;
+  font-size: 18px;
+  line-height: 18px;
+  color: #666d89;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.008rem;
+}
+
+.person-description {
+  padding-bottom: 22px;
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  text-align: justify;
+  letter-spacing: -0.004rem;
+}
+
+.social-links-wrapper {
+  display: flex;
+}
+
+.link-wrapper {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border: 1px solid #666d89;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.link-wrapper:last-of-type {
+  margin: 0;
+}
+
+.link-wrapper:hover {
+  filter: brightness(60%);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.link-wrapper .social {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
+}
+
+.facebook {
+  background-image: url("../assets/img/about-us/icons/facebook.svg");
+  background-size: 8px;
+}
+
+.gplus {
+  background-image: url("../assets/img/about-us/icons/gplus.svg");
+  background-size: 15px;
+}
+
+.twitter {
+  background-image: url("../assets/img/about-us/icons/twitter.svg");
+  background-size: 16px;
+}
+
+.linkedin {
+  background-image: url("../assets/img/about-us/icons/linkedin.svg");
+  background-size: 15px;
+}

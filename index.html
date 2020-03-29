@@ -24,19 +24,19 @@
               </div>
               <nav>
                 <ul class="navbar">
-                  <li><a class="selected" href="#home">home</a></li>
-                  <li><a href="#">services</a></li>
-                  <li><a href="#">portfolio</a></li>
-                  <li><a href="#">about</a></li>
-                  <li><a href="#">contact</a></li>
+                  <li><a class="selected" href="#">home</a></li>
+                  <li><a href="#services">services</a></li>
+                  <li><a href="#portfolio">portfolio</a></li>
+                  <li><a href="#about">about</a></li>
+                  <li><a href="#contact">contact</a></li>
                 </ul>
               </nav>
             </div>
           </header>
         </div>
       </div>
-      <main>
-        <div class="slider-background">
+      <main class="main" data-scroll="home">
+        <div class="slider-background slide-1">
           <div class="container">
             <div class="wrapper">
               <div class="slider">
@@ -90,15 +90,26 @@
                     </g>
                   </svg>
                 </button>
-                <div class="vertical phone"></div>
-                <div class="horizontal phone"></div>
+                <div class="slider-content-wrapper">
+                  <div class="slide slide-1">
+                    <div class="vertical phone"></div>
+                    <div class="vertical-phone-screen clickable-screen"></div>
+                    <div class="horizontal phone"></div>
+                    <div class="horizontal-phone-screen clickable-screen"></div>
+                  </div>
+                  <div class="slide slide-2 hidden">
+                    <div class="phone-group"></div>
+                    <div class="large-phone-screen clickable-screen"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="content-background">
           <div class="container">
-            <section class="services">
+            <section class="services" data-scroll="services">
+              <div class="anchor" id="services"></div>
               <div class="wrapper">
                 <header>
                   <div class="section-header-wrapper">
@@ -226,7 +237,8 @@
         </div>
         <div class="portfolio-background">
           <div class="container">
-            <section>
+            <section data-scroll="portfolio">
+              <div class="anchor" id="portfolio"></div>
               <div class="wrapper">
                 <header>
                   <div class="section-header-wrapper">
@@ -237,10 +249,8 @@
                       Duis mollis, est non commodo luctus, nisi erat porttitor
                       ligula, eget lacinia odio sem nec elit.
                     </p>
-                    <div class="potfolio-tags">
-                      <span class="portfolio-tag portfolio-tag-selected"
-                        >all</span
-                      >
+                    <div class="portfolio-tags">
+                      <span class="portfolio-tag selected">all</span>
                       <span class="portfolio-tag">web design</span>
                       <span class="portfolio-tag">graphic design</span>
                       <span class="portfolio-tag">artwork</span>
@@ -366,7 +376,8 @@
         </div>
         <div class="about-background">
           <div class="container">
-            <section>
+            <section data-scroll="about">
+              <div class="anchor" id="about"></div>
               <div class="wrapper">
                 <header>
                   <div class="section-header-wrapper">
@@ -470,7 +481,8 @@
         </div>
         <div class="quotes-background">
           <div class="container">
-            <section class="quotes">
+            <section class="quotes" data-scroll="contact">
+              <div class="anchor" id="contact"></div>
               <div class="wrapper">
                 <header>
                   <div class="section-header-wrapper">
@@ -486,12 +498,7 @@
                 </header>
                 <div class="quotes-content-wrapper">
                   <div class="form-wrapper">
-                    <form
-                      action="#"
-                      method="post"
-                      id="quote"
-                      onsubmit="return false"
-                    >
+                    <form action="#" method="post" id="quote">
                       <div class="input-wrapper">
                         <input
                           type="text"
@@ -595,6 +602,18 @@
           </div>
         </footer>
       </main>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <div class="modal-content-wrapper">
+          <h4>Letter sent</h4>
+          <p>Subject: <span class="message-subject"></span></p>
+          <p>Description: <span class="message-description"></span></p>
+        </div>
+        <div class="close-btn-wrapper">
+          <span class="close-button">OK</span>
+        </div>
+      </div>
     </div>
     <script src="./script.js"></script>
   </body>

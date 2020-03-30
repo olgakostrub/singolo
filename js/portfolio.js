@@ -1,27 +1,45 @@
 const addPortfolioClickHandler = () => {
-  const portfolioContainer = document.querySelector(
-    ".portfolio-content-wrapper"
-  );
-  portfolioContainer.addEventListener("click", evt => {
-    const classList = evt.target.parentNode.classList;
-    if (!classList.contains("portfolio-item")) return;
-    if (classList.contains("selected")) {
-      classList.remove("selected");
-    } else {
-      document
-        .querySelectorAll(".portfolio-item")
-        .forEach(item => item.classList.remove("selected"));
-      classList.add("selected");
-    }
+  const portfolioContainers = document.querySelectorAll(".portfolio-content");
+  portfolioContainers.forEach(container => {
+    container.addEventListener("click", evt => {
+      const classList = evt.target.parentNode.classList;
+      if (!classList.contains("portfolio-item")) return;
+      if (classList.contains("selected")) {
+        classList.remove("selected");
+      } else {
+        container
+          .querySelectorAll(".portfolio-item")
+          .forEach(item => item.classList.remove("selected"));
+        classList.add("selected");
+      }
+    });
   });
 };
 
+const getNumImagesInRow = container => {
+  if (container.classList.contains("portfolio-content-wrapper--desktop"))
+    return 4;
+  if (container.classList.contains("portfolio-content-wrapper--tablet"))
+    return 3;
+  if (container.classList.contains("portfolio-content-wrapper--mobile"))
+    return 2;
+  return null;
+};
+
 const shiftPortfolioImages = () => {
-  const IMAGES_IN_ROW = 4;
+  const targetContainer = Array.from(
+    document.querySelectorAll(".portfolio-content")
+  ).filter(
+    el => window.getComputedStyle(el).getPropertyValue("display") !== "none"
+  )[0];
+  if (!targetContainer) return;
+  const IMAGES_IN_ROW = getNumImagesInRow(targetContainer);
   const portfolioImages = Array.from(
-    document.querySelectorAll(".portfolio-item")
+    targetContainer.querySelectorAll(".portfolio-item")
   );
-  const portfolioRows = document.querySelectorAll(".portfolio-content-row");
+  const portfolioRows = targetContainer.querySelectorAll(
+    ".portfolio-content-row"
+  );
 
   const getRandomImage = () =>
     portfolioImages.splice(

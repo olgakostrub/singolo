@@ -4,10 +4,10 @@ const addPortfolioClickHandler = () => {
   );
   portfolioContainer.addEventListener("click", evt => {
     const classList = evt.target.parentNode.classList;
-    if (
-      classList.contains("portfolio-item") &&
-      !classList.contains("selected")
-    ) {
+    if (!classList.contains("portfolio-item")) return;
+    if (classList.contains("selected")) {
+      classList.remove("selected");
+    } else {
       document
         .querySelectorAll(".portfolio-item")
         .forEach(item => item.classList.remove("selected"));
@@ -38,22 +38,22 @@ const shiftPortfolioImages = () => {
 };
 
 const addTabClickHandler = () => {
-    const portfolioTabs = document.querySelector(".portfolio-tags");
-    portfolioTabs.addEventListener("click", evt => {
-      const classList = evt.target.classList;
-      if (
-        classList.contains("portfolio-tag") &&
-        !classList.contains("selected")
-      ) {
-        document.querySelectorAll(".portfolio-tag").forEach(tag => {
-          tag.innerHTML !== evt.target.innerHTML
-            ? tag.classList.remove("selected")
-            : tag.classList.add("selected");
-        });
-      }
-      shiftPortfolioImages();
-    });
-  };
+  const portfolioTabs = document.querySelector(".portfolio-tags");
+  portfolioTabs.addEventListener("click", evt => {
+    const classList = evt.target.classList;
+    if (
+      classList.contains("portfolio-tag") &&
+      !classList.contains("selected")
+    ) {
+      document.querySelectorAll(".portfolio-tag").forEach(tag => {
+        tag.innerHTML !== evt.target.innerHTML
+          ? tag.classList.remove("selected")
+          : tag.classList.add("selected");
+      });
+    }
+    shiftPortfolioImages();
+  });
+};
 
 export default {
   addPortfolioClickHandler,

@@ -22,6 +22,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  min-width: 320px;
+}
+
 /* backgrounds */
 .general-background {
   width: 100%;
@@ -232,6 +236,7 @@ div.anchor {
   fill: #ca4549;
   stroke: none;
   transition: fill 0.5s ease;
+  z-index: 5;
 }
 
 .slider-btn.left {
@@ -301,7 +306,7 @@ div.anchor {
   border-radius: 2px;
 }
 
-.large-phone-screen {
+.group-phone-screen {
   position: absolute;
   width: 201px;
   height: 354px;
@@ -321,8 +326,16 @@ div.anchor {
 
 /* services */
 
-.section-content-wrapper {
+.section-content-wrapper--desktop {
   padding: 4px 0 42px 0;
+}
+
+.section-content-wrapper--tablet {
+  display: none;
+}
+
+.section-content-wrapper--mobile {
+  display: none;
 }
 
 .section-content-row {
@@ -790,4 +803,217 @@ div.anchor {
 .modal-content h4,
 .modal-content p {
   margin: 2px 0;
+}
+
+/* RESPONSIVE - up to 1019px */
+
+@media screen and (max-width: 1019px) {
+  /* slider */
+  .slider-background,
+  .slider {
+    height: 452px;
+  }
+
+  .slider-btn {
+    transform: none;
+    top: 214px;
+  }
+
+  .slider-btn.left {
+    left: 0;
+  }
+
+  .slider-btn.right {
+    right: 0;
+  }
+
+  .phone {
+    box-shadow: 15px 20px 2px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .vertical {
+    left: 84px;
+    top: 41px;
+    width: 163px;
+    height: 345px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .vertical-phone-screen {
+    width: 142px;
+    height: 251px;
+    top: 90px;
+    left: 94px;
+  }
+
+  .horizontal {
+    left: 320px;
+    top: 133px;
+    width: 345px;
+    height: 163px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .horizontal-phone-screen {
+    width: 252px;
+    height: 142px;
+    top: 143px;
+    left: 365px;
+  }
+
+  .phone-group {
+    top: 41px;
+    left: 200px;
+    width: 346px;
+    height: 345px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .group-phone-screen {
+    width: 133px;
+    height: 237px;
+    top: 87px;
+    left: 298px;
+  }
+
+  /* services */
+  .services .section-header-wrapper {
+    padding-top: 40px;
+  }
+
+  .section-content-wrapper--desktop {
+    display: none;
+  }
+
+  .section-content-wrapper--tablet {
+    display: block;
+    padding: 4px 0 42px 0;
+  }
+
+  .section-content-wrapper--mobile {
+    display: none;
+  }
+
+  .services-item {
+    max-width: 380px;
+  }
+}
+
+/* RESPONSIVE - up to 767px */
+
+@media screen and (max-width: 767px) {
+  /* header and nav */
+  .header {
+    justify-content: center;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  /* slider */
+  .slider-background,
+  .slider {
+    height: 221px;
+  }
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .slider-btn {
+    transform: none;
+    top: 96px;
+  }
+
+  .slider-btn.left {
+    left: 11px;
+  }
+
+  .slider-btn.right {
+    right: 11px;
+  }
+
+  .phone {
+    box-shadow: 10px 15px 2px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .vertical {
+    left: 41px;
+    top: 20px;
+    width: 80px;
+    height: 169px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .vertical-phone-screen {
+    width: 70px;
+    height: 123px;
+    top: 44px;
+    left: 46px;
+  }
+
+  .horizontal {
+    left: 156px;
+    top: 65px;
+    width: 169px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .horizontal-phone-screen {
+    width: 123px;
+    height: 70px;
+    top: 70px;
+    left: 178px;
+  }
+
+  .phone-group {
+    top: 30px;
+    left: 105px;
+    width: 170px;
+    height: 169px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .group-phone-screen {
+    width: 66px;
+    height: 118px;
+    top: 52px;
+    left: 153px;
+  }
+
+  .services .section-header-wrapper {
+    padding: 25px 30px 0 30px;
+  }
+
+  .services .section-header-description {
+    padding-bottom: 0;
+  }
+
+  .section-content-wrapper--desktop {
+    display: none;
+  }
+
+  .section-content-wrapper--tablet {
+    display: none;
+  }
+
+  .section-content-wrapper--mobile {
+    padding: 4px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-item {
+    max-width: 90vw;
+    padding: 15px 0;
+  }
 }

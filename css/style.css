@@ -603,6 +603,10 @@ div.anchor {
   padding-top: 6px;
 }
 
+.quotes .wrapper {
+  padding-bottom: 52px;
+}
+
 .form-wrapper {
   max-width: 660px;
   width: 100%;
@@ -649,12 +653,16 @@ div.anchor {
 }
 
 .input-wrapper input[type="submit"] {
-  width: 150px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  width: 136px;
+  height: 38px;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+  background: #f8c65f;
+  border-radius: 5px;
+  color: #886a30;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .input-wrapper input[type="submit"]:hover,
@@ -735,15 +743,9 @@ div.anchor {
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 22px 10px;
-}
-
-.copyright-wrapper p {
-  font-size: 12px;
-  letter-spacing: -0.005rem;
-  color: #666d89;
 }
 
 /* modal */
@@ -933,6 +935,23 @@ div.anchor {
   }
 
   /* about us */
+  .about-background .section-header-wrapper {
+    padding-top: 52px;
+  }
+
+  .about-item img {
+    width: 219px;
+    height: 219px;
+  }
+
+  /* quotes */
+  .quotes-background .section-header-wrapper {
+    padding-top: 53px;
+  }
+
+  .quotes .wrapper {
+    padding-bottom: 31px;
+  }
 }
 
 /* RESPONSIVE - up to 767px */
@@ -1084,5 +1103,91 @@ div.anchor {
 
   /* about us */
   .about-background .section-header-wrapper {
+    padding: 33px 30px 0 30px;
+  }
+
+  .about-description-padding {
+    padding: 27px 0 14px 0;
+  }
+
+  .about-content-row {
+    flex-direction: column;
+  }
+
+  .about-item {
+    padding: 0 30px 34px 30px;
+    text-align: center;
+  }
+
+  .about-item img {
+    width: 314px;
+    height: 314px;
+  }
+
+  .about-item p {
+    padding: 0 0 10px 0;
+    text-align: left;
+  }
+
+  .about-content-wrapper {
+    padding-bottom: 0;
+  }
+
+  /* quotes */
+  .quotes .section-header-wrapper {
+    padding: 44px 30px 19px 30px;
+  }
+
+  .quotes .section-header-description {
+    padding: 14px 0 0 0;
+  }
+
+  .quotes-content-wrapper {
+    flex-flow: wrap;
+  }
+
+  .form-wrapper {
+    padding: 0 20px;
+  }
+
+  .input-wrapper input[type="submit"] {
+    width: 100%;
+  }
+
+  .contacts-wrapper {
+    padding: 22px 30px 0 30px;
+    max-width: none;
+  }
+
+  .quotes .wrapper {
+    padding-bottom: 42px;
+  }
+
+  @media screen and (max-width: 374px) {
+    .portfolio-background .section-header-wrapper {
+      padding: 42px 13px 10px 13px;
+    }
+
+    .portfolio-content-row {
+      padding: 5px;
+    }
+
+    .portfolio-item img {
+      width: 140px;
+      height: 120px;
+    }
+
+    .about .section-header-wrapper {
+      padding: 33px 15px 0 15px;
+    }
+
+    .about-item {
+      padding: 0 10px 34px 10px;
+    }
+
+    .about-item img {
+      width: 300px;
+      height: 300px;
+    }
   }
 }

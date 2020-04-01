@@ -14,6 +14,9 @@ window.onload = function() {
   // add handler for scroll to make menu active
   menu.addScrollMenuItemHandler();
 
+  // add handler for mobile menu burgers
+  menu.addBurgerMenuHandlers();
+
   // add handler for clicking portfolio items
   portfolio.addPortfolioClickHandler();
 

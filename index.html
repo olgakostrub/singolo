@@ -15,14 +15,17 @@
       <div class="header-background">
         <div class="container">
           <header>
-            <div class="wrapper header">
+              <div class="wrapper header">
+              <div class="burger-wrap">
+                <img src="./assets/img/icons/burger-menu-icon.svg" alt="Menu" />
+              </div>
               <div class="logo-wrap">
                 <h1>
                   <span class="logo">singolo</span
                   ><span class="asterisc">*</span>
                 </h1>
               </div>
-              <nav>
+              <nav class="nav">
                 <ul class="navbar">
                   <li><a class="selected" href="#">home</a></li>
                   <li><a href="#services">services</a></li>
@@ -937,11 +940,7 @@
                         ></textarea>
                       </div>
                       <div class="input-wrapper">
-                        <input
-                          type="submit"
-                          value="send"
-                          name="Submit"
-                        />
+                        <input type="submit" value="send" name="Submit" />
                       </div>
                     </form>
                   </div>
@@ -983,6 +982,9 @@
           <div class="container">
             <div class="wrapper">
               <div class="footer-content">
+                <div class="copyright-wrapper">
+                  <p>&copy; Copyright 2013</p>
+                </div>
                 <div class="social-links-wrapper">
                   <div class="link-wrapper">
                     <a href="#"><span class="social facebook"></span></a>
@@ -1014,6 +1016,30 @@
           <span class="close-button">OK</span>
         </div>
       </div>
+    </div>
+    <div class="nav-mobile-wrapper">
+      <nav class="nav-mobile">
+        <div class="menu-header">
+          <div class="burger-wrap">
+            <img
+              src="./assets/img/icons/burger-menu-icon-open.svg"
+              alt="Menu opened"
+            />
+          </div>
+          <div class="logo-wrap">
+            <h1>
+              <span class="logo">singolo</span><span class="asterisc">*</span>
+            </h1>
+          </div>
+        </div>
+        <ul class="navbar">
+          <li><a class="selected" href="#">home</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
     </div>
     <script src="./script.js"></script>
   </body>

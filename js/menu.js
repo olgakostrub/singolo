@@ -34,7 +34,7 @@ const addScrollMenuItemHandler = () => {
   });
   const headerHeight = document.querySelector(".header-background")
     .offsetHeight;
-  const PART_WHERE_NEW_SECTION_STARTS = 0.3;
+  const PART_WHERE_NEW_SECTION_STARTS = 0.2;
 
   window.addEventListener("scroll", () => {
     const fromTop =
@@ -53,7 +53,27 @@ const addScrollMenuItemHandler = () => {
   });
 };
 
+const addBurgerMenuHandlers = () => {
+  const openMenu = document.querySelector(".header .burger-wrap");
+  const header = openMenu.closest(".header");
+  const closeMenu = document.querySelector(".nav-mobile .burger-wrap");
+  const mobileMenu = document.querySelector(".nav-mobile-wrapper");
+
+  // open mobile menu
+  openMenu.addEventListener("click", evt => {
+    if (header) header.classList.add("mobile-menu-opened");
+    if (mobileMenu) mobileMenu.classList.add("mobile-menu-opened");
+  });
+
+  // close mobile menu
+  closeMenu.addEventListener("click", evt => {
+    if (header) header.classList.remove("mobile-menu-opened");
+    if (mobileMenu) mobileMenu.classList.remove("mobile-menu-opened");
+  });
+};
+
 export default {
   addMenuItemsClickHandler,
-  addScrollMenuItemHandler
+  addScrollMenuItemHandler,
+  addBurgerMenuHandlers
 };

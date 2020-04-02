@@ -278,22 +278,6 @@ div.anchor {
   background-image: url("../assets/img/slider/vertical_phone.png");
 }
 
-.horizontal {
-  left: 395px;
-  top: 174px;
-  width: 458px;
-  height: 215px;
-  background-image: url("../assets/img/slider/horizontal_phone.png");
-}
-
-.phone-group {
-  position: absolute;
-  top: 53px;
-  left: 235px;
-  width: 517px;
-  height: 513px;
-  background-image: url("../assets/img/slider/phone_group.png");
-}
 
 .vertical-phone-screen {
   position: absolute;
@@ -305,6 +289,14 @@ div.anchor {
   border-radius: 2px;
 }
 
+.horizontal {
+  left: 395px;
+  top: 174px;
+  width: 458px;
+  height: 215px;
+  background-image: url("../assets/img/slider/horizontal_phone.png");
+}
+
 .horizontal-phone-screen {
   position: absolute;
   width: 333px;
@@ -313,6 +305,16 @@ div.anchor {
   left: 455px;
   z-index: 2;
   border-radius: 2px;
+}
+
+
+.phone-group {
+  position: absolute;
+  top: 53px;
+  left: 235px;
+  width: 517px;
+  height: 513px;
+  background-image: url("../assets/img/slider/phone_group.png");
 }
 
 .group-phone-screen {
@@ -832,7 +834,6 @@ div.anchor {
 }
 
 /* RESPONSIVE - up to 1019px */
-
 @media screen and (max-width: 1019px) {
   /* slider */
   .slider-background,
@@ -874,7 +875,7 @@ div.anchor {
   }
 
   .horizontal {
-    left: 320px;
+    left: calc(100vw - 449px);
     top: 133px;
     width: 345px;
     height: 163px;
@@ -886,12 +887,12 @@ div.anchor {
     width: 252px;
     height: 142px;
     top: 143px;
-    left: 365px;
+    left: calc(100vw - 404px);
   }
 
   .phone-group {
     top: 41px;
-    left: 200px;
+    left: calc(50% - 173px);
     width: 346px;
     height: 345px;
     background-size: contain;
@@ -902,7 +903,7 @@ div.anchor {
     width: 133px;
     height: 237px;
     top: 87px;
-    left: 298px;
+    left: calc(50% - 75px);
   }
 
   /* services */
@@ -970,7 +971,6 @@ div.anchor {
 }
 
 /* RESPONSIVE - up to 767px */
-
 @media screen and (max-width: 767px) {
   /* borders are removed in mobile version */
   .header-background,
@@ -1141,7 +1141,7 @@ div.anchor {
   }
 
   .horizontal {
-    left: 156px;
+    left: calc(100vw - 219px);
     top: 65px;
     width: 169px;
     height: 80px;
@@ -1153,12 +1153,12 @@ div.anchor {
     width: 123px;
     height: 70px;
     top: 70px;
-    left: 178px;
+    left: calc(100vw - 197px);
   }
 
   .phone-group {
     top: 30px;
-    left: 105px;
+    left: calc(50% - 85px);
     width: 170px;
     height: 169px;
     background-size: contain;
@@ -1169,7 +1169,7 @@ div.anchor {
     width: 66px;
     height: 118px;
     top: 52px;
-    left: 153px;
+    left: calc(50% - 37px);
   }
 
   .services .section-header-wrapper {
@@ -1307,6 +1307,7 @@ div.anchor {
   }
 }
 
+/* RESPONSIVE - up to 374px */
 @media screen and (max-width: 374px) {
   .portfolio-background .section-header-wrapper {
     padding: 42px 13px 10px 13px;

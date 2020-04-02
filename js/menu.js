@@ -53,22 +53,35 @@ const addScrollMenuItemHandler = () => {
   });
 };
 
+
+
 const addBurgerMenuHandlers = () => {
   const openMenu = document.querySelector(".header .burger-wrap");
   const header = openMenu.closest(".header");
   const closeMenu = document.querySelector(".nav-mobile .burger-wrap");
   const mobileMenu = document.querySelector(".nav-mobile-wrapper");
-
+  const closeMobileMenu = () => {
+    if (header) header.classList.remove("mobile-menu-opened");
+    if (mobileMenu) mobileMenu.classList.remove("mobile-menu-opened");
+  } 
+  
   // open mobile menu
-  openMenu.addEventListener("click", evt => {
+  openMenu.addEventListener("click", () => {
     if (header) header.classList.add("mobile-menu-opened");
     if (mobileMenu) mobileMenu.classList.add("mobile-menu-opened");
   });
 
   // close mobile menu
-  closeMenu.addEventListener("click", evt => {
-    if (header) header.classList.remove("mobile-menu-opened");
-    if (mobileMenu) mobileMenu.classList.remove("mobile-menu-opened");
+  closeMenu.addEventListener("click", () => {
+    closeMobileMenu();
+  });
+
+  // close mobile menu after clicking on a separate item 
+  const mobileNav = mobileMenu.querySelector(".navbar");
+  mobileNav.addEventListener("click", evt => {
+    if (evt.target.nodeName === "A") {
+      closeMobileMenu();
+    }
   });
 };
 
